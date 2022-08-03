@@ -1,4 +1,6 @@
 const express = require('express');
+const path = require('path');
+
 const app = express();
 
 app.get('/', (req, res) => {
@@ -7,8 +9,10 @@ app.get('/', (req, res) => {
 });
 
 app.get('/surdeig', (req, res) => {
-    res.sendFile('/home/trygve/coding/node-projects/servertest/images/sd.jpg', (err) => {
-        console.log('Something went wrong');
+    res.sendFile(path.join(__dirname, 'images', 'sd.jpg'), (err) => {
+        if (err) {
+            console.log('Something went wrong');
+        }
     });
 });
 
