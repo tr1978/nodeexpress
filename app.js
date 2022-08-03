@@ -20,6 +20,6 @@ app.all('*', (req, res) => {
     res.status(404).send('<h2>The requested resource: ' + req.url + ', was not found</h2>');
 });
 
-app.listen(3000, () => {
-    console.log('Server listening on the cool port 3000');
+app.listen(80, () => {
+    console.log('Server listening on the cool port 80');
 });
