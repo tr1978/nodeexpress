@@ -1,5 +1,7 @@
 const express = require('express');
+const https = require('https');
 const path = require('path');
+const fs = require('fs');
 
 const app = express();
 
@@ -20,6 +22,15 @@ app.all('*', (req, res) => {
     res.status(404).send('<h2>The requested resource: ' + req.url + ', was not found</h2>');
 });
 
-app.listen(80, () => {
-    console.log('Server listening on the cool port 80');
+const httpsServer = https.createServer(
+    {
+        key: fs.readFileSync('/etc/letsencrypt/live/ryggnet.com/privkey.pem'),
+        cert: fs.readFileSync('/etc/letsencrypt/live/ryggnet.com/cert.pem'),
+        ca: fs.readFileSync('/etc/letsencrypt/live/ryggnet.com/chain.pem'),
+    },
+    app
+);
+
+httpsServer.listen(443, () => {
+        console.log('Listening on port 443');
 });
