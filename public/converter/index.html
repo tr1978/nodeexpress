@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Converters</title>
+        <link href="style.css" rel="stylesheet" type="text/css">
+        <script src="script.js"></script>
+    </head>
+    <body>
+        <table>
+            <tr>
+                <td class="prompt">Fahrenheit to celcius:</td>
+                <td><input type="number" id="ftoc" class="datain" oninput="ConvertFToC()"></td>
+                <td class="result" id="ftocresult">0&deg C</td>
+            </tr>
+            <tr>
+                <td class="prompt">Celcius to fahrenheit:</td>
+                <td><input type="number" id="ctof" class="datain" oninput="ConvertCToF()"></td>
+                <td class="result" id="ctofresult">0&deg F</td>
+            </tr>
+            <tr>
+                <td class="prompt">Decimal to binary:</td>
+                <td><input type="number" id="dtob" class="datain" oninput="ConvertDToB()"></td>
+                <td class="result" id="dtobresult">0</td>
+            </tr>
+            <tr>
+                <td class="prompt">Binary to decimal:</td>
+                <td><input type="text" id="btod" class="datain" oninput="ConvertBToD()"></td>
+                <td class="result" id="btodresult">0</td>
+            </tr>
+            <tr>
+                <td class="prompt">Decimal to hex:</td>
+                <td><input type="number" id="dtoh" class="datain" oninput="ConvertDToH()"></td>
+                <td class="result" id="dtohresult">0</td>
+            </tr>
+            <tr>
+                <td class="prompt">Hex to decimal:</td>
+                <td><input type="text" id="htod" class="datain" oninput="ConvertHToD()"></td>
+                <td class="result" id="htodresult">0</td>
+            </tr>
+            <tr>
+                <td class="prompt">Decimal to base26:</td>
+                <td><input type="number" id="dtob26" class="datain" oninput="ConvertDToB26()"></td>
+                <td class="result" id="dtob26result">0</td>
+            </tr>
+            <tr>
+                <td class="prompt">Base26 to decimal:</td>
+                <td><input type="text" id="b26tod" class="datain" oninput="ConvertB26ToD()"></td>
+                <td class="result" id="b26todresult">0</td>
+            </tr>
+        </table>
+    </body>
+</html>

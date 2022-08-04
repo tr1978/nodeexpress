@@ -10,6 +10,8 @@ const options = {
     ca: fs.readFileSync('/etc/letsencrypt/live/ryggnet.com/chain.pem')
 }
 
+app.use(express.static('public'));
+
 app.get('/', (req, res) => {
     var myres = '<p>You requested: ' + req.url + '</p>\n<h1>My cool server</h1>';
     res.send(myres);
