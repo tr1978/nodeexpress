@@ -1,0 +1,26 @@
+body {
+    margin-top: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
+    background-color: rgb(224, 176, 168);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+td {
+    width: 33%;
+    /* border: 0px solid white; */
+    border: none;
+}
+
+#stest {
+    background-color: rgb(255, 240, 168);
+    border: 2px solid black;
+    border-radius: 15px;
+    box-shadow: 10px 10px 10px rgb(59, 59, 59);
+    margin: 20px;
+    padding: 20px;
+}
