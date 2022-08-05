@@ -1,8 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Paytone+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:wght@200&display=swap');
+
 body {
     margin-top: 5%;
     margin-left: 5%;
     margin-right: 5%;
-    background-color: rgb(224, 176, 168);
+    background-color: rgb(71, 138, 255);
 }
 
 table {
@@ -10,17 +13,39 @@ table {
     border-collapse: collapse;
 }
 
-td {
-    width: 33%;
-    /* border: 0px solid white; */
-    border: none;
+img {
+    border-radius: 7px;
+    display: block;
+    width: 100%;
+    padding-right: 7px;
+}
+
+h2 {
+    font-family: "Paytone One";
+    font-size: 38px;
 }
 
 #stest {
-    background-color: rgb(255, 240, 168);
-    border: 2px solid black;
-    border-radius: 15px;
-    box-shadow: 10px 10px 10px rgb(59, 59, 59);
+    background-color: #f0ffb9;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 8px;
+    box-shadow: 8px 8px 5px rgb(46, 46, 46);
     margin: 20px;
-    padding: 20px;
+    padding: 0px;
+    font-family: "Roboto Flex";
+    font-size: 0.8em;
+}
+
+#dleft {
+    width: 40%;
+    padding: 0px;
+    margin: 0px;
+}
+
+#dright {
+    width: 60%;
+    padding-left: 50px;
+    padding-right: 50px;
+    vertical-align: text-top;
+    font-size: 1.5em;
 }
