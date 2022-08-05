@@ -4,12 +4,6 @@ const path = require('path');
 // const fs = require('fs');
 const app = express();
 
-// const options = {
-//     key: fs.readFileSync('/etc/letsencrypt/live/ryggnet.com/privkey.pem'),
-//     cert: fs.readFileSync('/etc/letsencrypt/live/ryggnet.com/cert.pem'),
-//     ca: fs.readFileSync('/etc/letsencrypt/live/ryggnet.com/chain.pem')
-// }
-
 app.use(express.static('public'));
 
 // app.get('/', (req, res) => {
@@ -21,9 +15,17 @@ app.use(express.static('public'));
 //     res.status(404).send('<h2>The requested resource: ' + req.url + ', was not found</h2>');
 // });
 
+// Listen on http
 app.listen(3000, () => {
     console.log('Server listening on port 3000....');
 });
+
+// Listen on https
+// const options = {
+//     key: fs.readFileSync('/etc/letsencrypt/live/ryggnet.com/privkey.pem'),
+//     cert: fs.readFileSync('/etc/letsencrypt/live/ryggnet.com/cert.pem'),
+//     ca: fs.readFileSync('/etc/letsencrypt/live/ryggnet.com/chain.pem')
+// }
 
 // const httpsServer = https.createServer(options, app);
 
