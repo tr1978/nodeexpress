@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Throw Dice!</title>
+        <script src="code.js"></script>
+    </head>
+    <body>
+        <br>
+        <table>
+            <tr>
+                <td>
+                    <label for="dieNumber">How many dice to roll:</label><br>
+                    <input type="text" id="dieNumber" name="dieNumber"><br><br>
+                </td>
+                <td>
+                    <input type="color" id="colorPick" onchange="changeColor()">
+                </td>
+                <td>
+                    <input type="checkbox" id="randomColor" name="randomColor" value="randomColor" onchange="changeColor()">
+                    <label for="randomColor">Random colors</label>
+                </td>
+                <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                <td>
+                    <h3 id="total"></h3>
+                </td>
+                </td>
+                <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                <td>
+                <td>
+                    <button onmousedown="resetScore()">Reset</button>
+                </td>
+            </tr>
+        </table>
+        <br>
+        <button onmousedown="doRoll()">Roll dice!</button><br><br><br><br>
+        <div id="diceArea">
+        </div>
+    </body>
+</html>
