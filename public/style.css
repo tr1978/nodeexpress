@@ -52,26 +52,22 @@ p {
     vertical-align: text-top;
 }
 
-/* unvisited link */
 a:link {
     color: rgb(0, 0, 0);
     text-decoration: none;
-  }
-  
-  /* visited link */
-  a:visited {
+}
+
+a:visited {
     color: rgb(0, 0, 0);
     text-decoration: none;
-  }
-  
-  /* mouse over link */
-  a:hover {
+}
+
+a:hover {
     color: rgb(211, 100, 252);
     text-decoration: none;
-  }
-  
-  /* selected link */
-  a:active {
+}
+
+a:active {
     color: rgb(0, 0, 0);
     text-decoration: none;
-  }
+}
