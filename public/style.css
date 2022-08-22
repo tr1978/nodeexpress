@@ -1,56 +1,57 @@
 @import url('https://fonts.googleapis.com/css2?family=Paytone+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:wght@200&display=swap');
 
-body {
-    margin-top: 5%;
-    margin-left: 5%;
-    margin-right: 5%;
-    background-color: rgb(71, 138, 255);
-}
-
 table {
     width: 100%;
     border-collapse: collapse;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+table table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+td {
+    text-align: center;
+    padding: 0px;
+    margin: 0px;
+    width: 33%;
+    /* border: 1px solid black; */
 }
 
 img {
-    border-radius: 7px;
-    display: block;
     width: 100%;
-    padding-right: 7px;
-}
-
-h2 {
-    font-family: "Paytone One";
-    font-size: 38px;
+    height: 100%; 
+    object-fit: contain;
+    display: block;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
 }
 
 p {
     font-family: "Roboto Flex";
-    font-size: 20px;
+    font-size: 1.3em;
 }
 
-.stest {
-    background-color: #f0ffb9;
-    border: 1px solid rgb(0, 0, 0);
-    border-radius: 8px;
-    box-shadow: 4px 4px 5px rgb(46, 46, 46);
-    /* box-shadow: 10px 20px 50px rgb(76, 76, 76); */
-    margin: 20px;
-    padding: 0px;
+.pcell {
+    padding: 30px;
 }
 
-.dleft {
-    width: 40%;
-    padding: 0px;
-    margin: 0px;
+.innertable {
+    border: 1px solid black;
+    border-top-left-radius: 10px;
 }
 
-.dright {
-    width: 60%;
+.arttext {
+    background-color: rgb(191, 255, 149);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
     padding-left: 50px;
     padding-right: 50px;
-    vertical-align: text-top;
 }
 
 a:link {
