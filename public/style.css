@@ -7,25 +7,17 @@ body {
 }
 
 table {
-    width: 80%;
     border-collapse: collapse;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-table table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-left: auto;
-    margin-right: auto;
+    width: 400px;
+    display: block;
 }
 
 td {
     text-align: center;
     padding: 0px;
     margin: 0px;
-    width: 33%;
-    /* border: 1px solid black; */
+    width: 100%;
+    border-collapse: collapse;
 }
 
 img {
@@ -35,17 +27,23 @@ img {
     display: block;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
-    box-shadow: 0px 0px 10px rgb(0, 0, 0);
-    /* border: 1px solid black; */
-    /* border-top: 1px solid black;
-    border-left: 1px solid black;
-    border-right: 1px solid black; */
+    box-shadow: 0px 0px 15px rgb(0, 0, 0);
 }
 
 p {
     font-family: "Roboto Flex";
     font-size: 1.3em;
     text-align: left;
+}
+
+.flexcont {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 60px;
+    margin-top: 100px;
+    margin-bottom: 100px;
 }
 
 #maintitle {
@@ -72,26 +70,14 @@ h2 {
     text-align: left;
 }
 
-.pcell {
-    padding: 30px;
-}
-
-.innertable {
-    border: 1px solid black;
-    border-top-left-radius: 10px;
-}
-
 .arttext {
-    background-color: rgb(202, 255, 180);
+    background-color: rgb(252, 255, 174);
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
-    padding-left: 50px;
-    padding-right: 50px;
-    box-shadow: 0px 0px 10px rgb(0, 0, 0);
+    padding-left: 40px;
+    padding-right: 40px;
+    box-shadow: 0px 0px 15px rgb(0, 0, 0);
     height: 250px;
-    /* border-bottom: 1px solid black;
-    border-left: 1px solid black;
-    border-right: 1px solid black; */
 }
 
 a:link {
@@ -105,7 +91,7 @@ a:visited {
 }
 
 a:hover {
-    color: rgb(130, 121, 255);
+    color: rgb(255, 56, 56);
     text-decoration: none;
 }
 
