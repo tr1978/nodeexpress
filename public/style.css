@@ -90,7 +90,7 @@
 
     h2 {
         font-family: "Paytone One";
-        font-size: 4em;
+        font-size: 3em;
         text-align: left;
     }
 
@@ -141,7 +141,7 @@ img {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-    gap: 60px;
+    gap: 100px;
     margin-top: 100px;
     margin-bottom: 100px;
 }
