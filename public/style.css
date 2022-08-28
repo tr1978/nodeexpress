@@ -36,6 +36,11 @@
         text-align: left;
     }
 
+    h2 {
+        font-family: "Paytone One";
+        text-align: left;
+    }
+
     #maintitle {
         font-family: "Carter One";
         font-size: 5em;
@@ -80,6 +85,12 @@
     p {
         font-family: "Roboto Flex";
         font-size: 2em;
+        text-align: left;
+    }
+
+    h2 {
+        font-family: "Paytone One";
+        font-size: 4em;
         text-align: left;
     }
 
@@ -133,11 +144,6 @@ img {
     gap: 60px;
     margin-top: 100px;
     margin-bottom: 100px;
-}
-
-h2 {
-    font-family: "Paytone One";
-    text-align: left;
 }
 
 .arttext {
