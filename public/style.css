@@ -29,6 +29,25 @@
         border-collapse: collapse;
         height: 200px;
     }
+
+    #maintitle {
+        font-family: "Carter One";
+        font-size: 5em;
+        color: rgb(240, 255, 77);
+        text-align: center;
+        text-shadow: 5px 5px 10px black;
+        padding-bottom: 0px;
+        margin-bottom: 0px;
+    }
+    
+    #tagline {
+        font-family: "Roboto Flex";
+        font-size: 1em;
+        text-align: center;
+        color: rgb(255, 255, 255);
+        margin-bottom: 50px;
+        text-shadow: 0px 0px 6px rgb(237, 255, 72);
+    }
 }
 
 @media (max-aspect-ratio: 999/1000) {
@@ -49,12 +68,28 @@
         margin: 0px;
         width: 100%;
         border-collapse: collapse;
-        height: 80vw/2;
+        height: 35vw;
+    }
+
+    #maintitle {
+        font-family: "Carter One";
+        font-size: 12vw;
+        color: rgb(240, 255, 77);
+        text-align: center;
+        text-shadow: 5px 5px 10px black;
+        padding-bottom: 0px;
+        margin-bottom: 0px;
+    }
+    
+    #tagline {
+        font-family: "Roboto Flex";
+        font-size: 1em;
+        text-align: center;
+        color: rgb(255, 255, 255);
+        margin-bottom: 50px;
+        text-shadow: 0px 0px 6px rgb(237, 255, 72);
     }
 }
-
-
-
 
 img {
     width: 100%;
@@ -90,25 +125,6 @@ p {
     gap: 60px;
     margin-top: 100px;
     margin-bottom: 100px;
-}
-
-#maintitle {
-    font-family: "Carter One";
-    font-size: 5em;
-    color: rgb(240, 255, 77);
-    text-align: center;
-    text-shadow: 5px 5px 10px black;
-    padding-bottom: 0px;
-    margin-bottom: 0px;
-}
-
-#tagline {
-    font-family: "Roboto Flex";
-    font-size: 1em;
-    text-align: center;
-    color: rgb(255, 255, 255);
-    margin-bottom: 50px;
-    text-shadow: 0px 0px 6px rgb(237, 255, 72);
 }
 
 h2 {
