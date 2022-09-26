@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Converters</title>
+        <link href="style.css" rel="stylesheet" type="text/css">
+        <script src="script.js"></script>
+    </head>
+    <body>
+        <table>
+            <tr>
+                <td class="prompt">Strømpris (øre/kWh):</td>
+                <td><input type="number" id="spris" class="datain" oninput="Beregn()"></td>
+            </tr>
+            <tr>
+                <td class="prompt">Antall kWh:</td>
+                <td><input type="number" id="antkwh" class="datain" oninput="Beregn()"></td>
+                <td class="result" id="resultat">0&deg F</td>
+            </tr>
+        </table>
+    </body>
+</html>
