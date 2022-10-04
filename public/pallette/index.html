@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Color Palette</title>
+</head>
+
+<body>
+    <div>
+        <canvas id="cpall" width="1024" height="256"></canvas>
+    </div>
+    <script>
+        "use strict";
+
+        let canvas = document.getElementById("cpall").getContext("2d");
+
+        for (let i = 0; i < 256; i++) {
+            for (let j = 0; j < 1024; j++) {
+                canvas.fillStyle = "rgb(" + (255 - i) + ", " + (255 - i - Math.floor(j/4)) + ", " + (255 - i - Math.floor(j/4)) + ")";
+                // canvas.fillStyle = "rgb(" + j/4 + ", " + i + ", " + j/4 + ")";
+                canvas.fillRect(j, i, 1, 1);
+            }
+        }
+    </script>
+</body>
+
+</html>
