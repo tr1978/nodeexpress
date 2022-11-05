@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Sorting Visualization</title>
+</head>
+
+<body>
+    <div>
+        <canvas id="display" width="1024" height="150"></canvas><br>
+        <input type="button" id="rando" value="Randomize" onclick="DoRandom()">
+        <input type="button" id="qsort" value="QuickSort" onclick="DoQuickSort()">
+        <input type="button" id="bsort" value="Bubble-Sort" onclick="DoBubbleSort()">
+    </div>
+
+    <script>
+        "use strict";
+
+        function DrawVis(array) {
+            for (let i = 0; i < 256; i++) {
+                ctx.fillStyle = array[i];
+                ctx.beginPath();
+                ctx.rect(spacing, 0, 4, 150);
+                ctx.fill();
+                spacing += 4;
+            }
+            spacing = 0;
+        }
+
+        async function bubbleSort(array) {
+            let i, j;
+
+            for (i = 0; i < array.length - 1; i++) {
+                for (j = 0; j < array.length - i - 1; j++) {
+                    if (colorOrderRef[array[j]] > colorOrderRef[array[j + 1]]) {
+                        swap(array, j, j + 1);
+                    }
+                }
+            }
+        }
+
+        function partition(array, low, high) {
+            let pivot = colorOrderRef[array[high]];
+            let i = low - 1;
+
+            for (let j = low; j <= high - 1; j++) {
+                if (colorOrderRef[array[j]] < pivot) {
+                    i++;
+                    swap(array, i, j);
+                }
+            }
+            swap(array, i + 1, high);
+            return (i + 1);
+        }
+
+        function quickSort(array, low, high) {
+            if (low < high) {
+                let pi = partition(array, low, high);
+                quickSort(array, low, pi - 1);
+                quickSort(array, pi + 1, high);
+            }
+        }
+
+        // function sleep(ms) {
+        //     return new Promise(resolve => setTimeout(resolve, ms));
+        // }
+
+        function swap(array, i, j) {
+            recording.push(new Array(i, j));
+            let temp = array[i];
+            array[i] = array[j];
+            array[j] = temp;
+        }
+
+        function Animate(timestamp) {
+            let temp = myCopy[recording[playbackFrame][0]];
+            myCopy[recording[playbackFrame][0]] = myCopy[recording[playbackFrame][1]];
+            myCopy[recording[playbackFrame][1]] = temp;
+            DrawVis(myCopy);
+            playbackFrame++;
+
+            if (playbackFrame < recording.length) {
+                window.requestAnimationFrame(Animate);
+            } else {
+                playbackFrame = 0;
+                recording = new Array();
+                document.getElementById("rando").disabled = false;
+                document.getElementById("qsort").disabled = false;
+                document.getElementById("bsort").disabled = false;
+            }
+        }
+
+        function Randomize(array) {
+            let m = array.length;
+            let i;
+            while (m) {
+                i = Math.floor(Math.random() * m--);
+                swap(array, i, m);
+            }
+        }
+
+        function DoRandom() {
+            document.getElementById("rando").disabled = true;
+            document.getElementById("qsort").disabled = true;
+            document.getElementById("bsort").disabled = true;
+            Randomize(myColors);
+            window.requestAnimationFrame(Animate);
+        }
+
+        function DoQuickSort() {
+            document.getElementById("rando").disabled = true;
+            document.getElementById("qsort").disabled = true;
+            document.getElementById("bsort").disabled = true;
+            for (let i = 0; i < 256; i++) {
+                myCopy[i] = myColors[i];
+            }
+            quickSort(myColors, 0, myColors.length - 1);
+            window.requestAnimationFrame(Animate);
+        }
+
+        function DoBubbleSort() {
+            document.getElementById("rando").disabled = true;
+            document.getElementById("qsort").disabled = true;
+            document.getElementById("bsort").disabled = true;
+            for (let i = 0; i < 256; i++) {
+                myCopy[i] = myColors[i];
+            }
+            bubbleSort(myColors);
+            window.requestAnimationFrame(Animate);
+        }
+
+        let cnvVar = document.getElementById("display");
+        let ctx = cnvVar.getContext("2d");
+        let myColors = new Array(256);
+        let myCopy = new Array(256);
+        let recording = new Array();
+        let colorOrderRef = new Object();
+        let spacing = 0;
+        let countingtest = 0;
+        let playbackFrame = 0;
+
+        for (let i = 0; i < 256; i++) {
+            myColors[i] = `rgb(0, ${i}, ${255 - i})`;
+            colorOrderRef[`rgb(0, ${i}, ${255 - i})`] = i;
+            // myColors[i] = `rgb(${255 - i}, ${i}, 0)`;
+            // colorOrderRef[`rgb(${255 - i}, ${i}, 0)`] = i;
+        }
+
+        for (let i = 0; i < 256; i++) {
+            myCopy[i] = myColors[i];
+        }
+
+        DrawVis(myColors);
+    </script>
+</body>
+
+</html>
